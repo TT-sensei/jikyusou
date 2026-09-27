@@ -1,4 +1,4 @@
-/* 距離・周回の段階はここだけ編集。imageはcollection側で差し替えます。 */
+/* mモードは100m単位。周モードではvalueをそのまま周として使います。 */
 window.JIKYUSOU_MEDALS=[
 {id:"1",value:1,label:"1"},
 {id:"2",value:2,label:"2"},
