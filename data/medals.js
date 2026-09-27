@@ -1,2 +1,11 @@
-/* メダルはここだけ編集すれば追加・削除できます。imageは既存メダル素材へのパスまたはURLです。 */
-window.JIKYUSOU_MEDALS=[{id:"1km",distance:1000,label:"1km",image:""},{id:"2km",distance:2000,label:"2km",image:""},{id:"3km",distance:3000,label:"3km",image:""},{id:"5km",distance:5000,label:"5km",image:""},{id:"7km",distance:7000,label:"7km",image:""},{id:"10km",distance:10000,label:"10km",image:""},{id:"15km",distance:15000,label:"15km",image:""},{id:"20km",distance:20000,label:"20km",image:""}];
+/* 距離・周回の段階はここだけ編集。imageはcollection側で差し替えます。 */
+window.JIKYUSOU_MEDALS=[
+{id:"1",value:1,label:"1"},
+{id:"2",value:2,label:"2"},
+{id:"3",value:3,label:"3"},
+{id:"5",value:5,label:"5"},
+{id:"7",value:7,label:"7"},
+{id:"10",value:10,label:"10"},
+{id:"15",value:15,label:"15"},
+{id:"20",value:20,label:"20"}
+];
