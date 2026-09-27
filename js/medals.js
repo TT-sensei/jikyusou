@@ -1,0 +1,1 @@
+window.JikyusouMedals=(function(){function newlyAchieved(list,prev,next,achieved){const result=[];list.forEach(m=>{if(prev<m.distance&&next>=m.distance&&!achieved.includes(m.id)){achieved.push(m.id);result.push(m)}});return result}function achieved(m,total){return total>=m.distance}return{newlyAchieved,achieved}})();
