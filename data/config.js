@@ -1,1 +1,1 @@
-window.JIKYUSOU_CONFIG={storagePrefix:"jikyusou_v2",defaults:{school:"",grade:"",className:"",lapDistance:200,goalDistance:10000}};
+window.JIKYUSOU_CONFIG={storagePrefix:"jikyusou_v2",defaults:{school:"",grade:"",className:"",lapDistance:200,goalDistance:10000,goalUnit:"m",medalUnit:"m",medalCollection:"original"}};
