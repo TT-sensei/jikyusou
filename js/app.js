@@ -2,7 +2,8 @@
 const $=id=>document.getElementById(id),sharedMode=JikyusouSettings.isSharedMode();
 const entry=$("entryScreen"),classScreen=$("classScreen"),personalApp=$("app");
 function showScreen(mode){entry.classList.toggle("hidden",mode!=="entry");classScreen.classList.toggle("hidden",mode!=="class");personalApp.classList.toggle("hidden",mode!=="personal")}
-if(sharedMode){showScreen("personal")}else{const mode=location.hash==="#class"?"class":location.hash==="#personal"?"personal":"entry";showScreen(mode);$("personalModeBtn").addEventListener("click",()=>{location.hash="personal";showScreen("personal")});$("classModeBtn").addEventListener("click",()=>{location.hash="class";showScreen("class")});$("classBackBtn").addEventListener("click",()=>{history.replaceState(null,"",location.pathname+location.search);showScreen("entry")})}
+if(sharedMode){showScreen("personal");$("howToPanel").classList.remove("hidden")}else{const mode=location.hash==="#class"?"class":location.hash==="#personal"?"personal":"entry";showScreen(mode);$("personalModeBtn").addEventListener("click",()=>{location.hash="personal";showScreen("personal")});$("classModeBtn").addEventListener("click",()=>{location.hash="class";showScreen("class")});$("classBackBtn").addEventListener("click",()=>{history.replaceState(null,"",location.pathname+location.search);showScreen("entry")})}
+const entrySettings=$("entryTeacherSettingsBtn"); if(entrySettings)entrySettings.addEventListener("click",()=>{location.hash="personal";showScreen("personal");$("settingsDialog").showModal()}); const howToSettings=$("howToSettingsBtn"); if(howToSettings)howToSettings.addEventListener("click",()=>$("settingsDialog").showModal());
 const classMode=location.hash==="#class"&&!sharedMode;
 if(classMode){
  const d=classData(), cs=JikyusouSettings.load(); let selected=0,pending=0;
