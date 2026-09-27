@@ -19,9 +19,10 @@ function show(m,s,p,name){
   x.fillText((m.unit==="lap"?m.value+"周":m.value.toLocaleString("ja-JP")+"m")+"を達成しました。",w/2,415);
   x.fillText("これまでの記録："+t.dist.toLocaleString("ja-JP")+"m（"+t.laps+"周）",w/2,460);
   if(navi.naturalWidth){
-   const maxW=250,maxH=120,scale=Math.min(maxW/navi.naturalWidth,maxH/navi.naturalHeight);
+   const maxW=500,maxH=220,scale=Math.min(maxW/navi.naturalWidth,maxH/navi.naturalHeight);
    const nw=navi.naturalWidth*scale,nh=navi.naturalHeight*scale;
-   x.drawImage(navi,(w-nw)/2,500,nw,nh);
+   const bottom=h-125;
+   x.drawImage(navi,(w-nw)/2,bottom-nh,nw,nh);
   }
   x.font="400 20px sans-serif";x.fillStyle="#707b73";
   const d=new Date();
@@ -32,8 +33,7 @@ function show(m,s,p,name){
  const bg=new Image(),navi=new Image();
  let bgReady=false,naviReady=false,shown=false;
  function tryDraw(){
-  if(shown||!bgReady)return;
-  if(!naviReady)return;
+  if(shown||!bgReady||!naviReady)return;
   shown=true;draw();
  }
  bg.onload=()=>{bgReady=true;tryDraw()};
